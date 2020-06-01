@@ -22,7 +22,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: insall nodejs
-      run: action /setup-node@v2-beta
+      uses: actions/setup-node@v2-beta
       with:
         node-vrsion: 12  
     - name: install surge
