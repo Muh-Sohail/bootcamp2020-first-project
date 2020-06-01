@@ -20,12 +20,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell
+    # Runs a single command using the runners shell 
     - name: insall nodejs
       uses: actions/setup-node@v2-beta
       with:
         node-vrsion: 12  
-    - name: install surge
-      run : npm install -g surge
+    - name: Intall Surge
+      run: npm install -g surge
     - name: run surge
       run : surge ./ bootcamp2020-sohail.surge.sh --token ${{secrets.SOHAIL_TOKEN}}    
