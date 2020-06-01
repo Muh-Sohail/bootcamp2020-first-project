@@ -28,4 +28,4 @@ jobs:
     - name: install surge
       run : npm install -g surge
     - name: run surge
-      run : ./ bootcamp2020-sohail.surge.sh --token ${{secrets.SOHAIL_TOKEN}}    
+      run : surge ./ bootcamp2020-sohail.surge.sh --token ${{secrets.SOHAIL_TOKEN}}    
