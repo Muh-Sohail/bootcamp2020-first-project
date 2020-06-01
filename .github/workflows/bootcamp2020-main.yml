@@ -1,13 +1,14 @@
 # This is a basic workflow to help you get started with Actions
 
-name: bootcamp2020-1
+name: sohail_deploy_surge
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
     branches: [ master ]
- 
+
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -20,12 +21,13 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell 
-    - name: insall nodejs
+    # Runs a single command using the runners shell
+    - name: Install NodeJS
       uses: actions/setup-node@v2-beta
       with:
-        node-vrsion: 12  
+        node-version: 12 
     - name: Intall Surge
       run: npm install -g surge
     - name: run surge
-      run : surge ./ bootcamp2020-sohail.surge.sh --token ${{secrets.SOHAIL_TOKEN}}    
+      run:  surge ./ bootcamp2020-sohail.surge.sh/ --token ${{secrets.SOHAIL_TOKEN}}
+   
